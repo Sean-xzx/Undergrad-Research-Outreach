@@ -1,0 +1,29 @@
+# Local archives, research working notes and recoverable snapshots
+/backups/
+/XTaoci-backups/
+/.validation-deps/
+/undergrad-research-outreach-v*.zip
+/source-notes.md
+/skill-design.md
+/skill-review.md
+/scenario-review.md
+/使用指南.md
+/publication-report.md
+/.publication/
+# Generated environments and packages
+/.venv/
+/dist/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+# Private outreach records and credentials
+outreach/
+profile.md
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.log
+.DS_Store
+Thumbs.db

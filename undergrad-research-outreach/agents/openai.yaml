@@ -1,0 +1,6 @@
+interface:
+  display_name: "本科生科研套磁"
+  short_description: "从找合适导师到写信、跟进和面谈，逐步帮助本科生争取真实科研机会"
+  default_prompt: "用 $undergrad-research-outreach 帮我推进本科生科研套磁，从我目前卡住的一步开始，每次给我一个具体下一步。"
+policy:
+  allow_implicit_invocation: true
