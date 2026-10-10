@@ -21,7 +21,7 @@
 
 以下供作者及获准评估者使用，详见[版权说明](COPYRIGHT.md)。
 
-**环境：**Git；科研套磁流程需要支持 skill 的 Codex 环境；仓库验证可选 Python 3.12。核心是 Markdown/YAML，无需 Python、模型权重、数据集、数据库或仓库 API 密钥。查询教授当前信息需要宿主浏览工具；代发邮件需要可用邮件工具与明确授权。
+**环境**：Git；科研套磁流程需要支持 skill 的 Codex 环境；仓库验证可选 Python 3.12。核心是 Markdown/YAML，无需 Python、模型权重、数据集、数据库或仓库 API 密钥。查询教授当前信息需要宿主浏览工具；代发邮件需要可用邮件工具与明确授权。
 
 ```bash
 git clone https://github.com/Sean-xzx/Undergrad-Research-Outreach.git
