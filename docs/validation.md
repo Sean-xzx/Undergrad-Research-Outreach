@@ -31,6 +31,16 @@ The [GitHub Actions workflow](../.github/workflows/validate.yml) repeats these c
 
 Windows/Linux 自动检查结果可在 Actions 查看。这些检查不调用实际模型/API，不发送邮件，也不验证教授反馈。
 
+## Published verification / 发布后验证
+
+On 2026-10-10, published commit `054c23e364d257f6e8f244bf3dfc5b7fc7a28ba2` passed both Windows and Linux jobs in [run 38058311571](https://github.com/Sean-xzx/Undergrad-Research-Outreach/actions/runs/38058311571). Each job performed source validation, all 12 tests, packaging and archive validation with Python 3.12. A fresh clone from GitHub, using a separate Windows/Python 3.12.14 environment and a new uncached dependency installation, also passed the README's full five-command sequence. Both READMEs rendered through GitHub's HTML endpoint, with language and local-document navigation present; the remote file set matched the 24-file publication.
+
+2026-10-10，提交 `054c23e364d257f6e8f244bf3dfc5b7fc7a28ba2` 的 Windows/Linux 两个自动检查任务均通过，分别执行源文件检查、12 项测试、打包及包内校验。从 GitHub 全新克隆后，在另一个 Windows/Python 3.12.14 环境中重新安装依赖，README 的五步流程也全部通过。两版 README 经 GitHub HTML 接口渲染，包含语言切换及内部导航；远程文件清单与 24 文件的发布内容一致。
+
+Later commits have their own live checks in Actions; the dated evidence above refers to that specific commit. This is repository reproducibility evidence, not a live outreach demonstration.
+
+后续提交以各自 Actions 结果为准。上述证据对应明确提交，证明仓库流程可复现，不代表真实套磁演示。
+
 ## Not established / 尚未证明
 
 - Stable execution of every stage by an independent model or another agent host.
