@@ -38,3 +38,9 @@ Fixed sending times, guaranteed outcomes, unverified reply-rate percentages and 
 ## Tools / 工具
 
 The separately installed validation dependency is [PyYAML](https://pypi.org/project/PyYAML/6.0.3/). CI references official [checkout](https://github.com/actions/checkout) and [setup-python](https://github.com/actions/setup-python) actions by commit. These components keep their own licenses. [Project rights](../COPYRIGHT.md).
+
+## v1.1 engineering revision
+
+The revision was informed by an authorized private workflow review: reactive institution coverage, ambiguous research boundaries, narrative output counts and interrupted continuity. Public instructions retain general mechanisms only; student identities, professor lists, contact addresses and private transcripts are not included.
+
+Runtime selection uses Python's standard-library [sqlite3](https://docs.python.org/3/library/sqlite3.html), [SQLite atomic commits](https://www.sqlite.org/atomiccommit.html), and a documented [JSON Schema object contract](https://json-schema.org/understanding-json-schema/reference/object). These references support technical choices, not evidence of live outreach performance.

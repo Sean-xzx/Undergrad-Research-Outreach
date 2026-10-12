@@ -19,7 +19,7 @@ class ProjectTests(unittest.TestCase):
         self.temp = tempfile.TemporaryDirectory()
         self.root = Path(self.temp.name) / "repo"
         self.root.mkdir()
-        for directory in (SKILL_NAME, "checksums", "docs", "examples"):
+        for directory in (SKILL_NAME, "checksums", "docs", "examples", "evals"):
             shutil.copytree(ROOT / directory, self.root / directory)
         for name in ("README.md", "README.zh-CN.md", "COPYRIGHT.md", "requirements-dev.txt"):
             shutil.copyfile(ROOT / name, self.root / name)
@@ -45,14 +45,14 @@ class ProjectTests(unittest.TestCase):
 
     def test_private_record_inside_skill_is_rejected(self):
         (self.root / SKILL_NAME / "profile.md").write_text("private fixture", encoding="utf-8")
-        self.assertTrue(any("exactly the seven" in error for error in validate(self.root)))
+        self.assertTrue(any("exactly the release" in error for error in validate(self.root)))
 
     def test_invalid_manifest_paths_are_rejected(self):
         path = self.root / "checksums/skill-sha256.json"
         data = json.loads(path.read_text(encoding="utf-8"))
         data["../private.md"] = "0" * 64
         path.write_text(json.dumps(data), encoding="utf-8")
-        self.assertTrue(any("exactly the seven" in error for error in validate(self.root)))
+        self.assertTrue(any("exactly the release" in error for error in validate(self.root)))
 
     def test_malformed_frontmatter_is_rejected(self):
         (self.root / SKILL_NAME / "SKILL.md").write_text("---\nname: [\n---\n", encoding="utf-8")
@@ -81,7 +81,7 @@ class ProjectTests(unittest.TestCase):
         path = build(self.root, Path(self.temp.name) / "package.zip")
         with zipfile.ZipFile(path, "a") as archive:
             archive.writestr("private.md", "not a release file")
-        self.assertTrue(any("only the seven unique" in error for error in validate(self.root, path)))
+        self.assertTrue(any("only the release unique" in error for error in validate(self.root, path)))
 
     def test_corrupt_archive_is_rejected(self):
         path = Path(self.temp.name) / "broken.zip"

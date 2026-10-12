@@ -18,6 +18,12 @@ __pycache__/
 .pytest_cache/
 # Private outreach records and credentials
 outreach/
+outputs/
+*.sqlite3
+*.sqlite3-journal
+*.sqlite3-wal
+*.sqlite3-shm
+evals/results/
 profile.md
 .env
 .env.*

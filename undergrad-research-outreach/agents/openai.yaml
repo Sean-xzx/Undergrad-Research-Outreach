@@ -1,6 +1,6 @@
 interface:
   display_name: "本科生科研套磁"
-  short_description: "从找合适导师到写信、跟进和面谈，逐步帮助本科生争取真实科研机会"
-  default_prompt: "用 $undergrad-research-outreach 帮我推进本科生科研套磁，从我目前卡住的一步开始，每次给我一个具体下一步。"
+  short_description: "主动发现导师、核验条件并保留进度，支持本科生写信、跟进与面谈"
+  default_prompt: "用 $undergrad-research-outreach 帮我推进本科生科研套磁。从当前困境开始；需要拓广时主动发现并核验，完成我要求的名单或材料，保留真实进度。"
 policy:
   allow_implicit_invocation: true

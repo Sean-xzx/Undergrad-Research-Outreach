@@ -1,0 +1,452 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Outreach ledger batch v1",
+  "type": "object",
+  "additionalProperties": false,
+  "$defs": {
+    "entities": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "name",
+        "type"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "institution_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "type": {
+          "enum": [
+            "researcher",
+            "institution",
+            "project",
+            "paper"
+          ]
+        },
+        "aliases": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "legacy": {
+          "type": "object"
+        }
+      }
+    },
+    "sources": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "access",
+        "id",
+        "observed_at",
+        "read_scope",
+        "url"
+      ],
+      "properties": {
+        "page_date": {
+          "type": "string",
+          "minLength": 1
+        },
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "excerpt": {
+          "type": "string",
+          "minLength": 1
+        },
+        "url": {
+          "type": "string",
+          "minLength": 1
+        },
+        "read_scope": {
+          "type": "string",
+          "minLength": 1
+        },
+        "observed_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "access": {
+          "enum": [
+            "retrieved",
+            "restricted",
+            "failed"
+          ]
+        }
+      }
+    },
+    "claims": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "evidence",
+        "id",
+        "predicate",
+        "status",
+        "subject_id",
+        "value"
+      ],
+      "properties": {
+        "value": {},
+        "evidence": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "source_id",
+              "locator",
+              "relation"
+            ],
+            "properties": {
+              "source_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "locator": {
+                "type": "string",
+                "minLength": 1
+              },
+              "relation": {
+                "enum": [
+                  "supports",
+                  "contradicts"
+                ]
+              },
+              "source_digest": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        },
+        "subject_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "status": {
+          "enum": [
+            "conflict",
+            "contradicted",
+            "pending",
+            "superseded",
+            "supported"
+          ]
+        },
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        },
+        "predicate": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "papers": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "author_ids",
+        "ccf_catalog",
+        "ccf_category",
+        "evidence",
+        "id",
+        "paper_type",
+        "status",
+        "year"
+      ],
+      "properties": {
+        "evidence": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "author_ids": {
+              "type": "string",
+              "minLength": 1
+            },
+            "year": {
+              "type": "string",
+              "minLength": 1
+            },
+            "status": {
+              "type": "string",
+              "minLength": 1
+            },
+            "paper_type": {
+              "type": "string",
+              "minLength": 1
+            },
+            "ccf_category": {
+              "type": "string",
+              "minLength": 1
+            },
+            "ccf_catalog": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "ccf_category": {
+          "enum": [
+            "A",
+            "B",
+            "C",
+            "unlisted",
+            "unknown"
+          ]
+        },
+        "status": {
+          "enum": [
+            "formal_accepted",
+            "formal_published",
+            "preprint_only",
+            "unknown"
+          ]
+        },
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "year": {
+          "type": "integer",
+          "minimum": 1900,
+          "maximum": 2200
+        },
+        "author_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "paper_type": {
+          "enum": [
+            "full",
+            "workshop",
+            "other"
+          ]
+        },
+        "ccf_catalog": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "constraints": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "kind",
+        "operator",
+        "origin",
+        "predicate",
+        "scope",
+        "value"
+      ],
+      "properties": {
+        "kind": {
+          "enum": [
+            "hard",
+            "preference"
+          ]
+        },
+        "operator": {
+          "enum": [
+            "eq",
+            "in",
+            "ge"
+          ]
+        },
+        "scope": {
+          "type": "string",
+          "minLength": 1
+        },
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "predicate": {
+          "type": "string",
+          "minLength": 1
+        },
+        "value": {},
+        "origin": {
+          "type": "string",
+          "minLength": 1
+        },
+        "exceptions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "tasks": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "kind",
+        "path",
+        "reason",
+        "state",
+        "target_id"
+      ],
+      "properties": {
+        "kind": {
+          "type": "string",
+          "minLength": 1
+        },
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "depends_on": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "state": {
+          "enum": [
+            "blocked",
+            "cancelled",
+            "done",
+            "pending",
+            "retryable",
+            "running"
+          ]
+        },
+        "attempts": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        },
+        "target_id": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "events": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "basis",
+        "id",
+        "occurred_at",
+        "subject_id",
+        "type"
+      ],
+      "properties": {
+        "occurred_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "basis": {
+          "type": "string",
+          "minLength": 1
+        },
+        "payload": {
+          "type": "object"
+        },
+        "subject_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "type": {
+          "enum": [
+            "arrangement_confirmed",
+            "correction_recorded",
+            "declined",
+            "draft_created",
+            "legacy_imported",
+            "paused",
+            "reply_received",
+            "send_authorized",
+            "send_result_unknown",
+            "sent_confirmed"
+          ]
+        }
+      }
+    }
+  },
+  "properties": {
+    "claims": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/claims"
+      }
+    },
+    "constraints": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/constraints"
+      }
+    },
+    "entities": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/entities"
+      }
+    },
+    "events": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/events"
+      }
+    },
+    "papers": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/papers"
+      }
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/sources"
+      }
+    },
+    "tasks": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/tasks"
+      }
+    }
+  }
+}

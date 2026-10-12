@@ -1,2 +1,2 @@
-# Required only for repository validation and packaging, not for the skill itself.
+# Repository validation dependency. The installed ledger uses Python standard libraries only.
 PyYAML==6.0.3

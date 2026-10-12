@@ -5,7 +5,7 @@ import argparse
 from pathlib import Path
 import zipfile
 
-from validate_project import CORE_FILES, ROOT, SKILL_NAME, validate
+from validate_project import CORE_FILES, ROOT, SKILL_NAME, VERSION, validate
 
 
 def build(root: Path, output: Path) -> Path:
@@ -32,13 +32,13 @@ def build(root: Path, output: Path) -> Path:
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--root", type=Path, default=ROOT)
-    parser.add_argument("--output", type=Path, default=ROOT / "dist/undergrad-research-outreach-v1.0.0.zip")
+    parser.add_argument("--output", type=Path, default=ROOT / "dist" / f"undergrad-research-outreach-v{VERSION}.zip")
     args = parser.parse_args()
     try:
         path = build(args.root, args.output)
     except (OSError, ValueError) as error:
         parser.exit(1, f"FAIL: {error}\n")
-    print(f"Built {path.name}: 7 verified skill files.")
+    print(f"Built {path.name}: {len(CORE_FILES)} verified skill files.")
     return 0
 
 

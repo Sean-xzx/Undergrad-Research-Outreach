@@ -21,4 +21,10 @@ A good result contains one main deliverable and one next step. It must not inven
 
 ## Repository output you can actually reproduce / 可实际复现的仓库输出
 
-Run the validation, tests and packaging commands in [README](../README.md). Success is a passing check plus a ZIP with exactly the seven original skill files. For the difference between this result and live agent evaluation, see [validation scope](../docs/validation.md).
+Run the validation, tests and packaging commands in [README](../README.md). Success is a passing check plus a ZIP with exactly the twelve current release files. The original seven-file v1.0 manifest is preserved separately. For the difference between this result and live agent evaluation, see [validation scope](../docs/validation.md).
+
+## Broad discovery / 广泛发现
+
+> 用 $undergrad-research-outreach。我不熟悉学校和老师，请主动拓广同地区科研机会，按研究证据和参与条件分开整理，不要只给最先找到的几位。
+
+Expected behavior: keep the broad mode, create a scope/coverage record, use institution and paper-author paths plus relevant collaboration leads, resolve identities, and explain unknown conditions. A small priority list may introduce the completed broader output; it must not replace the requested scope. This is an expected-behavior example, not a measured discovery result.

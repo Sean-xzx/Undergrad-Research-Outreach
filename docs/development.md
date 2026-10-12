@@ -1,58 +1,28 @@
 # Development and verification / 开发与验证
 
-These instructions apply to the author or authorized evaluators. [All rights reserved](../COPYRIGHT.md); public visibility does not authorize changes to core behavior.
+For the author and authorized evaluators. [Rights](../COPYRIGHT.md) are unchanged.
 
-以下供作者及获准评估者使用；公开查看不授权修改核心功能。
+## Runtime
 
-## Environment / 环境
-
-Python 3.12 and Git; PyYAML 6.0.3 is the sole validation dependency. Tests use Python's standard-library unittest; packaging uses zipfile. No secrets, CVs, professor contacts or model API are needed. No third-party runtime code is vendored.
-
-Python 3.12、Git；验证仅依赖固定版本 PyYAML 6.0.3。测试与打包使用标准库，无需密钥、个人履历或模型 API。
-
-Use the clean-venv commands in the [English README](../README.md) or [Chinese README](../README.zh-CN.md). Linux/macOS equivalents:
+Python 3.12+, Git and PyYAML 6.0.3 for repository validation. The installed ledger uses only standard libraries. No credentials or network access are needed for deterministic tests. Public fixtures use fictional identities and example.org evidence.
 
 ```bash
-python -m venv .venv
-.venv/bin/python -m pip install --no-cache-dir -r requirements-dev.txt
-.venv/bin/python scripts/validate_project.py
-.venv/bin/python -m unittest discover -s tests -v
-.venv/bin/python scripts/build_package.py
-.venv/bin/python scripts/validate_project.py --archive dist/undergrad-research-outreach-v1.0.0.zip
+python scripts/validate_project.py
+python -m unittest discover -s tests -v
+python scripts/build_package.py
+python scripts/validate_project.py --archive dist/undergrad-research-outreach-v1.1.0.zip
 ```
 
-## What the checks establish / 检查的意义
+Use the same virtual-environment interpreter for dependencies and commands. [Runtime operations](../undergrad-research-outreach/references/runtime.md), [behavior protocol](../evals/README.md).
 
-- Validate the seven exact core bytes, YAML metadata and local documentation links.
-- Reject missing/modified core files, unexpected private skill files, unsafe manifest paths, malformed metadata, and broken or escaping documentation links.
-- Build two archives with identical metadata in one runtime; verify only original skill bytes are included. ZIP compression bytes across different zlib/runtime versions are not a strict portability promise.
-- Reject corrupted archives, added private files and output paths inside the protected skill directory.
+## Intentional release changes
 
-核对核心字节、配置与内部链接；拒绝缺失、修改、私人附加文件、越界路径、损坏配置和打包错误。同一运行环境中构建结果稳定；跨压缩库版本不承诺 ZIP 压缩字节完全相同，核心文件内容仍按指纹校验。
+The explicit `CORE_FILES` allowlist, metadata version, checksum manifest, package name, CI and documentation must agree. Update the manifest only after reviewing an authorized change; never suppress an unexplained integrity failure. Preserve the v1.0 manifest. Tests reject extra private files and unsafe archive paths. Generated __pycache__ is ignored but never packaged.
 
-Validation is deterministic and offline after dependency installation. It does not run the skill through a live model, send mail, or validate an outreach success rate. [Evidence and limitations](validation.md).
+Private records, outputs, databases and backups are ignored by Git. Stage only reviewed public paths; do not use blanket staging. Do not reset a user's ledger or overwrite existing profile/contact documents. Import legacy snapshots with originals intact and unsupported conclusions unverified.
 
-## Troubleshooting / 排错
+## Validation boundaries
 
-- Missing yaml module: install requirements using the same venv interpreter used to run the commands.
-- Integrity failure: compare the named core file against the committed v1.0 source. Do not update the checksum merely to suppress an unexpected change.
-- Broken link: repair the document path; do not remove an important resource to pass the check.
-- Discovery failure: ask the host to read the skill entry file and relevant references; discovery locations are host-specific.
+Business tests check counting, references, conflict/unknown handling, scoped exceptions, immutable events, idempotence, rollback and restart. Repository tests check YAML, links, checksum integrity and reproducible archives. They do not verify current professor facts or live model discovery. Behavior evaluation must use audited source packets and hidden reference answers; do not publish private user records.
 
-缺少 yaml 时用同一虚拟环境安装依赖；指纹失败先比较原始文件，不改指纹掩盖变更；链接失效时修正文档引用；未发现 skill 时可明确要求宿主读取主文件。
-
-## Updating the repository / 更新仓库
-
-Run validation, tests and packaging, review the staged files, then use ordinary commits and pushes. No force push is necessary. Publishing tooling never uses the account password or stores an API token in the repository.
-
-先验证、测试和打包，检查暂存内容，再普通提交和推送。不要提交用户记录、备份、缓存或凭据。核心功能变更需作者另行授权。
-
-```bash
-git status --short
-git add README.md README.zh-CN.md docs scripts tests requirements-dev.txt .github
-git diff --cached --stat
-git commit -m "Update documentation and verification"
-git push origin main
-```
-
-CI runs the same validation, 12 tests and build on Windows/Linux standard hosted runners, with read-only repository permissions. Issues should contain the failing command, runtime version and redacted error output. The workflow does not run an external model or use paid runners.
+Before publishing: run the complete checks, review the public diff, verify the archive manifest, then commit and push normally. Install only the verified package content, backing up a previous version. No force push is needed. Published CI results should be reported separately from local tests.
