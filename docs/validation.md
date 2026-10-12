@@ -16,6 +16,8 @@ On 2026-10-12, local Windows/Python 3.12.14 execution passed 47 tests (35 ledger
 
 [Actions](https://github.com/Sean-xzx/Undergrad-Research-Outreach/actions) contains published runs. Current-release CI status is checked after pushing; an earlier green run does not validate this version. These local tests are deterministic execution, not independent model discovery evaluation.
 
+On 2026-10-12, implementation commit `6165fa7475964447e92adc1c700a27793acacb26` passed both Windows and Linux jobs in [run 38199197977](https://github.com/Sean-xzx/Undergrad-Research-Outreach/actions/runs/38199197977). Both jobs executed source checks, all 47 tests, package construction and packaged-byte verification. A fresh clone of that published commit also passed these checks locally with the existing Python 3.12.14 validation environment. Later documentation commits have their own Actions runs.
+
 ## Not established
 
 The [behavior requests](../evals/cases.json) and [evaluation protocol](../evals/README.md) have not been run by an independent model as part of deterministic CI. The project does not claim improved recall, reduced user corrections, accurate current supervisor facts, reply rates or acceptance rates. Tests cannot prove semantic evidence interpretation or source truth. Live browsing and real contact events require separate dated evidence.
