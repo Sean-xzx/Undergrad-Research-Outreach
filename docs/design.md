@@ -22,6 +22,7 @@ Annual counts require matching supported evidence for authors, venue year, forma
 - [Runtime](../undergrad-research-outreach/references/runtime.md): executable contract and limitations.
 - [Records](../undergrad-research-outreach/references/records.md): privacy and continuity.
 - [Writing](../undergrad-research-outreach/references/writing.md): v1.1.2 connects experience to supported ability, concrete research appreciation and scoped revisions; current user edits take precedence over older drafts. Recent-paper scanning and collaboration attribution feed the choice of a research entry point. Personal preferences remain private.
+- v1.1.3 extends writing with interest-and-role-based paper selection and application-field answers. Records distinguish latest edits from unresolved factual conflicts and preserve field-level revisions. Form preparation, actual submission and email sending remain separate states.
 - Follow-through and source-learning guidance remains available.
 
 Original v1.0 fingerprints are preserved. v1.1 intentionally changes behavior and has its own manifest and packaging checks; the historical unchanged-byte policy is not presented as the current functional validation.

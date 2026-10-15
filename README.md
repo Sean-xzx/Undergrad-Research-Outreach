@@ -1,8 +1,12 @@
 [English](README.md) | [简体中文](README.zh-CN.md)
 
-# Undergraduate Research Outreach v1.1.2
+# Undergraduate Research Outreach v1.1.3
 
 A Codex skill for evidence-grounded supervisor discovery and undergraduate research outreach. It preserves drafting, follow-up, interview and trial-task guidance while adding broad discovery, condition checks and a local evidence ledger.
+
+## Writing and application forms (v1.1.3)
+
+Paper selection considers the student's interests and the faculty member's documented role together. New guidance handles acceptance/publication conflicts, short participation plans when requested, English form answers, and field-level recovery of user edits. Form preparation, submission and email sending stay separate. [Form regression cases](evals/form-cases.json) are a test protocol, not executed model results.
 
 ## Writing update (v1.1.2)
 
@@ -32,7 +36,7 @@ python -m venv .venv
 .venv/bin/python scripts/validate_project.py
 .venv/bin/python -m unittest discover -s tests -v
 .venv/bin/python scripts/build_package.py
-.venv/bin/python scripts/validate_project.py --archive dist/undergrad-research-outreach-v1.1.2.zip
+.venv/bin/python scripts/validate_project.py --archive dist/undergrad-research-outreach-v1.1.3.zip
 ```
 
 On Windows replace `.venv/bin/python` with `.\.venv\Scripts\python.exe`. CI checks Windows/Linux Python 3.12. The current package contains 12 verified public files; the seven-file v1.0 manifest is preserved separately. Private records, databases, generated candidate spreadsheets and backups are excluded.

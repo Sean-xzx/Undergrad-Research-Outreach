@@ -24,6 +24,12 @@ Local Windows/Python execution passed the existing 47 tests and repository sourc
 
 [Twenty writing cases](../evals/writing-cases.json) now supply fictional frozen inputs and observable acceptance criteria for ability inference, study scope, praise, preference updates, local-edit preservation, attribution and attachment status. These are a protocol, not executed model tests. The instructions were reviewed against these failure modes; no independent model comparison or reduction in user corrections has been established. See [evaluation procedure](../evals/README.md).
 
+## v1.1.3 application-form update — 2026-10-15
+
+After the selection, revision and form-writing changes, local Windows execution passed all 47 existing deterministic tests, frontmatter validation and source/link/checksum checks. Ledger code and schema are unchanged; the release continues to contain 12 allowlisted skill files.
+
+[Sixteen form cases](../evals/form-cases.json) add fictional frozen inputs covering author-role evidence, changing plan preferences, acceptance/publication conflicts, compact English answers, field-level recovery and submission status. Their JSON structure was checked and the instructions reviewed against the described cases; no independent model run or prior/new output comparison has been executed. These cases supplement, rather than replace, the v1.1.2 writing protocol.
+
 ## Not established
 
 The [behavior requests](../evals/cases.json) and [evaluation protocol](../evals/README.md) have not been run by an independent model as part of deterministic CI. The project does not claim improved recall, reduced user corrections, accurate current supervisor facts, reply rates or acceptance rates. Tests cannot prove semantic evidence interpretation or source truth. Live browsing and real contact events require separate dated evidence.

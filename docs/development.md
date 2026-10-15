@@ -10,7 +10,7 @@ Python 3.12+, Git and PyYAML 6.0.3 for repository validation. The installed ledg
 python scripts/validate_project.py
 python -m unittest discover -s tests -v
 python scripts/build_package.py
-python scripts/validate_project.py --archive dist/undergrad-research-outreach-v1.1.2.zip
+python scripts/validate_project.py --archive dist/undergrad-research-outreach-v1.1.3.zip
 ```
 
 Use the same virtual-environment interpreter for dependencies and commands. [Runtime operations](../undergrad-research-outreach/references/runtime.md), [behavior protocol](../evals/README.md).
