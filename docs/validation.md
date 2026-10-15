@@ -30,6 +30,12 @@ After the selection, revision and form-writing changes, local Windows execution 
 
 [Sixteen form cases](../evals/form-cases.json) add fictional frozen inputs covering author-role evidence, changing plan preferences, acceptance/publication conflicts, compact English answers, field-level recovery and submission status. Their JSON structure was checked and the instructions reviewed against the described cases; no independent model run or prior/new output comparison has been executed. These cases supplement, rather than replace, the v1.1.2 writing protocol.
 
+## v1.1.4 multi-target update — 2026-10-15
+
+Local Windows execution passed all 47 existing deterministic tests, skill frontmatter validation and source/link/checksum checks after the priority, recruitment and organization changes. No ledger implementation or schema change was made. The package remains limited to 12 public skill files.
+
+[Twenty multi-target cases](../evals/multi-target-cases.json) provide fictional inputs for persistent direction priorities, aliases, official recruitment checks, actual internship hosts, scoped availability, restricted sources and revision recovery. Their structure is validated separately from semantic behavior. These are not executed independent model evaluations; no reduction in user corrections or improved reply/acceptance rate is established.
+
 ## Not established
 
 The [behavior requests](../evals/cases.json) and [evaluation protocol](../evals/README.md) have not been run by an independent model as part of deterministic CI. The project does not claim improved recall, reduced user corrections, accurate current supervisor facts, reply rates or acceptance rates. Tests cannot prove semantic evidence interpretation or source truth. Live browsing and real contact events require separate dated evidence.

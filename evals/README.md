@@ -15,3 +15,7 @@ Structural tests cannot establish improved discovery or acceptance rates. Cases 
 ## Application-form regression (v1.1.3)
 
 [Form cases](form-cases.json) add 16 fictional frozen tasks covering author roles, interest-based selection, conflicting edits, changing preferences, concise drafts, form fields and submission states. Keep acceptance criteria hidden from the executor. Run prior and updated skills on the same input; assess source-supported facts before style. These cases have not been run as independent model evaluations.
+
+## Multi-target regression (v1.1.4)
+
+[Multi-target cases](multi-target-cases.json) provide 20 fictional frozen tasks for persistent interests, recruitment checks, hosting organizations, model aliases, scoped commitments and restricted evidence. Keep criteria hidden from the executor; compare prior/current instructions on identical inputs. No model execution or outreach-result improvement is claimed.

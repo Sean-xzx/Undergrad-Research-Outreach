@@ -2,7 +2,7 @@
 name: undergrad-research-outreach
 description: "帮助本科生联系高校或研究所教授，争取进组、暑期科研、科研实习或研究助理机会。用于目标澄清、导师筛选、论文入门、简历与套磁邮件、跟进、回复解读、面谈及试做准备；可从任一阶段开始。收到套磁经验资料时提炼并修订流程。以本科生科研机会为主，硕博招生须另行核实申请要求。"
 metadata:
-  version: "1.1.3"
+  version: "1.1.4"
 ---
 
 # 本科生科研套磁
@@ -36,7 +36,7 @@ metadata:
 | 用户的困境 | 当前工作 | 读取 |
 | --- | --- | --- |
 | 不知道找谁、觉得自己没经历、不了解目标组 | 澄清限制，寻找并核实候选，建立真实匹配 | [opportunities.md](references/opportunities.md) |
-| 有导师、不会读论文或写信、已有草稿 | 按兴趣与教师角色选文，连接能力证据，形成邮件与申请材料 | [writing.md](references/writing.md) |
+| 有导师、不会读论文或写信、已有草稿 | 按持续兴趣排序选文，先核申请条件与承接组织，再形成邮件与材料 | [writing.md](references/writing.md) |
 | 已发送、没回复、被拒绝、约面谈、要试做 | 判断状态，准备下一次行动，确认机会 | [follow-through.md](references/follow-through.md) |
 | 提供新经验资料、希望改进 skill | 实际阅读、提炼、处理冲突、检查使用情境 | [learning.md](references/learning.md) |
 

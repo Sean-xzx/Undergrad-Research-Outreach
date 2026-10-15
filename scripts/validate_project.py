@@ -14,7 +14,7 @@ import yaml
 
 ROOT = Path(__file__).resolve().parents[1]
 SKILL_NAME = "undergrad-research-outreach"
-VERSION = "1.1.3"
+VERSION = "1.1.4"
 CORE_FILES = (
     "SKILL.md",
     "agents/openai.yaml",

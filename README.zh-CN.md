@@ -1,6 +1,6 @@
 [English](README.md) | [简体中文](README.zh-CN.md)
 
-# 本科生科研套磁 v1.1.3
+# 本科生科研套磁 v1.1.4
 
 帮助本科生主动发现导师、核验研究与参与条件，再推进论文入门、材料、写信、跟进和确认机会。原有用户记录保留在私人项目，不随发布包上传。
 
@@ -37,7 +37,7 @@ Windows PowerShell：
 .\.venv\Scripts\python.exe scripts/validate_project.py
 .\.venv\Scripts\python.exe -m unittest discover -s tests -v
 .\.venv\Scripts\python.exe scripts/build_package.py
-.\.venv\Scripts\python.exe scripts/validate_project.py --archive dist/undergrad-research-outreach-v1.1.3.zip
+.\.venv\Scripts\python.exe scripts/validate_project.py --archive dist/undergrad-research-outreach-v1.1.4.zip
 ```
 
 Linux/macOS使用`.venv/bin/python`替换解释器路径。CI运行Windows/Linux Python 3.12；本机结果见[验证记录](docs/validation.md)。
@@ -55,6 +55,10 @@ Linux/macOS使用`.venv/bin/python`替换解释器路径。CI运行Windows/Linux
 程序无法证明网页真假或模型研究分类正确，需原文阅读和抽查。正式论文下限不足不直接判低产。独立模型发现性能与真实套磁结果尚未验证。
 
 **保留所有权利，不授予开源许可。**使用、修改和分发需取得许可；用户明确授权本次项目升级。见[版权说明](COPYRIGHT.md)，第三方来源和依赖保留各自权利。
+
+## v1.1.4 多导师连续写作
+
+持续保留方向优先级；发送建议前核查时长、地点、实际承接组织及投递渠道；保留模型别名和时间承诺适用范围。微调不改结构，受限检索不宣称“全网没有表格”。[新增20个验收场景](evals/multi-target-cases.json)尚未运行独立模型测试。
 
 ## v1.1.3 邮件与申请表
 

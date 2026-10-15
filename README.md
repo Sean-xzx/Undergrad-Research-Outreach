@@ -1,8 +1,12 @@
 [English](README.md) | [简体中文](README.zh-CN.md)
 
-# Undergraduate Research Outreach v1.1.3
+# Undergraduate Research Outreach v1.1.4
 
 A Codex skill for evidence-grounded supervisor discovery and undergraduate research outreach. It preserves drafting, follow-up, interview and trial-task guidance while adding broad discovery, condition checks and a local evidence ledger.
+
+## Multi-target outreach (v1.1.4)
+
+Direction priorities persist when new screenshots arrive. Before declaring a draft ready, check the actual internship host, duration, location, materials and channel; keep unresolved conditions explicit. Model aliases, scoped availability and latest edits remain traceable. Public-source failures and missing form evidence are reported within the checked scope. [Twenty multi-target cases](evals/multi-target-cases.json) are a protocol, not executed model results.
 
 ## Writing and application forms (v1.1.3)
 
@@ -36,7 +40,7 @@ python -m venv .venv
 .venv/bin/python scripts/validate_project.py
 .venv/bin/python -m unittest discover -s tests -v
 .venv/bin/python scripts/build_package.py
-.venv/bin/python scripts/validate_project.py --archive dist/undergrad-research-outreach-v1.1.3.zip
+.venv/bin/python scripts/validate_project.py --archive dist/undergrad-research-outreach-v1.1.4.zip
 ```
 
 On Windows replace `.venv/bin/python` with `.\.venv\Scripts\python.exe`. CI checks Windows/Linux Python 3.12. The current package contains 12 verified public files; the seven-file v1.0 manifest is preserved separately. Private records, databases, generated candidate spreadsheets and backups are excluded.
