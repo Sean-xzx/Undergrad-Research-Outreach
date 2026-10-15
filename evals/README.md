@@ -7,3 +7,7 @@ Give the executor only the request, skill and permitted sources. Keep expected n
 Offline CI runs business invariants and packaging, not independent model behavior. Live browsing needs a dated, separate run. Store private transcripts/results under ignored `evals/results/`; publish only redacted metrics with execution details. No contact messages or applications are sent in evaluation.
 
 Structural tests cannot establish improved discovery or acceptance rates. Cases are a maintained manual/model test protocol; no model API credential or automatic model runner is included.
+
+## Writing regression (v1.1.2)
+
+[Writing cases](writing-cases.json) provide fictional frozen facts, revision inputs and observable acceptance criteria. Give the executor only each request and input packet; reserve acceptance criteria for assessment. Compare the prior and current writing skill on identical inputs. Record unsupported additions, lost facts, unintended changes and source-scope errors separately from style. These cases are not an automated model runner and are not claimed as executed model results.

@@ -6,7 +6,7 @@ Validation has four separate layers: release integrity, deterministic business b
 
 The original seven-file v1.0 manifest is preserved in [baseline checksums](../checksums/skill-sha256-v1.0.0.json). Earlier evidence included 20 manual instruction scenarios and 12 repository tests. Published commit `054c23e364d257f6e8f244bf3dfc5b7fc7a28ba2` passed Windows/Linux [run 38058311571](https://github.com/Sean-xzx/Undergrad-Research-Outreach/actions/runs/38058311571). That evidence referred to the preserved instruction package, not improved discovery.
 
-## Current v1.1
+## v1.1 deterministic baseline
 
 The current release intentionally changes core behavior and uses a separate [current manifest](../checksums/skill-sha256.json). The public allowlist contains 12 files. Repository tests check modified/missing bytes, metadata, links, private-file rejection, archive membership, deterministic packaging and output-path safety.
 
@@ -17,6 +17,12 @@ On 2026-10-12, local Windows/Python 3.12.14 execution passed 47 tests (35 ledger
 [Actions](https://github.com/Sean-xzx/Undergrad-Research-Outreach/actions) contains published runs. Current-release CI status is checked after pushing; an earlier green run does not validate this version. These local tests are deterministic execution, not independent model discovery evaluation.
 
 On 2026-10-12, implementation commit `6165fa7475964447e92adc1c700a27793acacb26` passed both Windows and Linux jobs in [run 38199197977](https://github.com/Sean-xzx/Undergrad-Research-Outreach/actions/runs/38199197977). Both jobs executed source checks, all 47 tests, package construction and packaged-byte verification. A fresh clone of that published commit also passed these checks locally with the existing Python 3.12.14 validation environment. Later documentation commits have their own Actions runs.
+
+## v1.1.2 writing update — 2026-10-15
+
+Local Windows/Python execution passed the existing 47 tests and repository source validation after the writing/reference update. The runtime schema and ledger implementation are unchanged. The release still has 12 allowlisted skill files. Frontmatter and archive checks are reported separately from model behavior; the historical v1.0 archive remains preserved.
+
+[Twenty writing cases](../evals/writing-cases.json) now supply fictional frozen inputs and observable acceptance criteria for ability inference, study scope, praise, preference updates, local-edit preservation, attribution and attachment status. These are a protocol, not executed model tests. The instructions were reviewed against these failure modes; no independent model comparison or reduction in user corrections has been established. See [evaluation procedure](../evals/README.md).
 
 ## Not established
 

@@ -1,6 +1,6 @@
 [English](README.md) | [简体中文](README.zh-CN.md)
 
-# 本科生科研套磁 v1.1
+# 本科生科研套磁 v1.1.2
 
 帮助本科生主动发现导师、核验研究与参与条件，再推进论文入门、材料、写信、跟进和确认机会。原有用户记录保留在私人项目，不随发布包上传。
 
@@ -37,7 +37,7 @@ Windows PowerShell：
 .\.venv\Scripts\python.exe scripts/validate_project.py
 .\.venv\Scripts\python.exe -m unittest discover -s tests -v
 .\.venv\Scripts\python.exe scripts/build_package.py
-.\.venv\Scripts\python.exe scripts/validate_project.py --archive dist/undergrad-research-outreach-v1.1.0.zip
+.\.venv\Scripts\python.exe scripts/validate_project.py --archive dist/undergrad-research-outreach-v1.1.2.zip
 ```
 
 Linux/macOS使用`.venv/bin/python`替换解释器路径。CI运行Windows/Linux Python 3.12；本机结果见[验证记录](docs/validation.md)。
@@ -55,3 +55,7 @@ Linux/macOS使用`.venv/bin/python`替换解释器路径。CI运行Windows/Linux
 程序无法证明网页真假或模型研究分类正确，需原文阅读和抽查。正式论文下限不足不直接判低产。独立模型发现性能与真实套磁结果尚未验证。
 
 **保留所有权利，不授予开源许可。**使用、修改和分发需取得许可；用户明确授权本次项目升级。见[版权说明](COPYRIGHT.md)，第三方来源和依赖保留各自权利。
+
+## v1.1.2 写作更新
+
+从真实经历提炼有依据的能力和研究联系；支持具体、适度的认可，避免虚构技能与上手计划；局部修订保留用户编辑，核查近期论文及合作归属。个人偏好仍保存在私人项目。[写作验收案例](evals/writing-cases.json)与[验证范围](docs/validation.md)分别记录；未宣称模型行为或回复率已改善。
