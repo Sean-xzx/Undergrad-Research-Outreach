@@ -27,3 +27,7 @@ Annual counts require matching supported evidence for authors, venue year, forma
 - Follow-through and source-learning guidance remains available.
 
 Original v1.0 fingerprints are preserved. v1.1 intentionally changes behavior and has its own manifest and packaging checks; the historical unchanged-byte policy is not presented as the current functional validation.
+
+## v1.1.5 revision continuity
+
+Complete drafts and scoped fragments have distinct provenance in existing private notes. Accepted lines are reused; a local topic change triggers only necessary subject/plan checks. Attachment and sending evidence do not follow from content acceptance. No ledger/schema change or parallel state system is introduced.

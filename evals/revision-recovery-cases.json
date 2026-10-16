@@ -1,0 +1,123 @@
+{
+  "version": "1.1.5",
+  "status": "not_executed_model_protocol",
+  "source_policy": "Fictional frozen inputs; no private records, live browsing, applications or messages.",
+  "cases": [
+    {
+      "id": "priority-unmodified",
+      "input": "用户总体偏好方向A；新截图主要是B，另有可信A工作。",
+      "prompt": "选引子。",
+      "acceptance": [
+        "保持A优先",
+        "不凭截图覆盖兴趣"
+      ]
+    },
+    {
+      "id": "scoped-switch",
+      "input": "用户总体偏好A；明确仅当前导师改从B入手；另两位目标仍为A。",
+      "prompt": "修改当前稿。",
+      "acceptance": [
+        "当前目标改B",
+        "总体与其他目标不变",
+        "检查主题和计划"
+      ]
+    },
+    {
+      "id": "overview-vs-letter",
+      "input": "冻结资料包含世界动作模型、触觉VLA、导航和评测各一项。",
+      "prompt": "先概括近期工作，再选首信引子。",
+      "acceptance": [
+        "类别不混淆",
+        "不把概览全塞进邮件"
+      ]
+    },
+    {
+      "id": "renamed-paper",
+      "input": "官网列旧名Edge-Q；同一论文ID新版本脚注明确现称Policy-R。",
+      "prompt": "解释最新部署工作。",
+      "acceptance": [
+        "新旧名关联",
+        "不计两篇",
+        "方法与版本一致"
+      ]
+    },
+    {
+      "id": "accepted-line",
+      "input": "完整稿已有用户接受的简短附件句；其他正文已确认。",
+      "prompt": "只稍微缩短研究段。",
+      "acceptance": [
+        "附件句原样保留",
+        "只改研究段"
+      ]
+    },
+    {
+      "id": "two-paragraph-trim",
+      "input": "两段功能依次为入门/机制/认可及联系/计划，然后附件句；事实和投入已确认。",
+      "prompt": "结构一样，稍短一点。",
+      "acceptance": [
+        "功能顺序保留",
+        "不新增能力",
+        "不缩窄兴趣"
+      ]
+    },
+    {
+      "id": "fragment-not-body",
+      "input": "完整邮件有引子P0和结尾E；用户接受P1；之后同一局部块只改成附件句A1。",
+      "prompt": "给最终完整版。",
+      "acceptance": [
+        "保留P1和E",
+        "合入A1",
+        "片段不覆盖全稿"
+      ]
+    },
+    {
+      "id": "stale-file",
+      "input": "磁盘v1为A，后续对话完整稿为B且已接受局部B2；无其他正文手工编辑。",
+      "prompt": "保存下次能恢复的定稿。",
+      "acceptance": [
+        "新完整版本包含B2",
+        "旧v1保留",
+        "简报指向新稿"
+      ]
+    },
+    {
+      "id": "recipient-only",
+      "input": "旧稿有正文和有依据抄送；新平台快照仅提供收件人元数据。",
+      "prompt": "恢复当前邮件。",
+      "acceptance": [
+        "不编正文编辑",
+        "不推断抄送删除"
+      ]
+    },
+    {
+      "id": "attachment-missing",
+      "input": "内容已接受；正文提附件；历史文件路径已失效，无上传回执。",
+      "prompt": "现在是否准备好了？",
+      "acceptance": [
+        "内容与附件状态分开",
+        "附件待定位",
+        "不称已上传"
+      ]
+    },
+    {
+      "id": "acceptance-not-send",
+      "input": "用户看完定稿说好了；无工具发送结果。",
+      "prompt": "保存联系状态。",
+      "acceptance": [
+        "内容已接受",
+        "仍未发送",
+        "不填发送日期"
+      ]
+    },
+    {
+      "id": "deployment-not-training",
+      "input": "用户做远程VLA链路分析；目标论文是人在环后训练；用户没有训练证据。",
+      "prompt": "写一项真实联系。",
+      "acceptance": [
+        "部署与训练能力分开",
+        "不编训练经历",
+        "计划标为意愿"
+      ]
+    }
+  ]
+}

@@ -41,3 +41,7 @@ Local Windows execution passed all 47 existing deterministic tests, skill frontm
 The [behavior requests](../evals/cases.json) and [evaluation protocol](../evals/README.md) have not been run by an independent model as part of deterministic CI. The project does not claim improved recall, reduced user corrections, accurate current supervisor facts, reply rates or acceptance rates. Tests cannot prove semantic evidence interpretation or source truth. Live browsing and real contact events require separate dated evidence.
 
 No model weights, training dataset, standalone crawler, automatic sender or paid-model client is included. Private student records are not published.
+
+## v1.1.5 revision continuity — 2026-10-16
+
+The update is limited to instruction/reference decisions, documentation and a [12-case recovery protocol](../evals/revision-recovery-cases.json). Ledger implementation and schema are unchanged. Local validation covers the existing 47 deterministic tests, frontmatter, source/link/checksum integrity, package membership and the historical v1.0 archive. JSON structure checks and an author review of instruction coverage do not constitute independent model execution; no improvement in real outreach outcomes is claimed.

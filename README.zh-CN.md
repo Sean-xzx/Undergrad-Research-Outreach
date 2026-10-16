@@ -1,8 +1,12 @@
 [English](README.md) | [简体中文](README.zh-CN.md)
 
-# 本科生科研套磁 v1.1.4
+# 本科生科研套磁 v1.1.5
 
 帮助本科生主动发现导师、核验研究与参与条件，再推进论文入门、材料、写信、跟进和确认机会。原有用户记录保留在私人项目，不随发布包上传。
+
+## v1.1.5 局部修订与完整稿恢复
+
+保留已认可措辞，按修改范围合并片段并保存当前完整版本；单个导师的选题调整不覆盖总体兴趣。文字接受、附件定位/上传和实际发送分别判断。[12个恢复验收场景](evals/revision-recovery-cases.json)尚未执行独立模型测试。用户私人记录与历史版本保留，不随公共包发布。
 
 ## 这次更新
 
@@ -37,7 +41,7 @@ Windows PowerShell：
 .\.venv\Scripts\python.exe scripts/validate_project.py
 .\.venv\Scripts\python.exe -m unittest discover -s tests -v
 .\.venv\Scripts\python.exe scripts/build_package.py
-.\.venv\Scripts\python.exe scripts/validate_project.py --archive dist/undergrad-research-outreach-v1.1.4.zip
+.\.venv\Scripts\python.exe scripts/validate_project.py --archive dist/undergrad-research-outreach-v1.1.5.zip
 ```
 
 Linux/macOS使用`.venv/bin/python`替换解释器路径。CI运行Windows/Linux Python 3.12；本机结果见[验证记录](docs/validation.md)。

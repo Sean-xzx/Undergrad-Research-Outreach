@@ -1,13 +1,13 @@
 {
-  "SKILL.md": "e9141d7ae1c20d0be87520f893df0d796084c201ee6b2f37260b05a231959935",
+  "SKILL.md": "acad667c9e8010d3765cf3c43db03936075398621db4f6838379428b0b35f8d1",
   "agents/openai.yaml": "86dfd6f64ce34f3cfe11eaf2a8081316429e1dd167479fa8da3753e8a6411a62",
   "references/opportunities.md": "9af2d00dc0314ea94e9e9551e9a441f82efa520416fb9f6047e105576e9ef441",
-  "references/writing.md": "dfa0da72ce55fbc853314f2e85830a6cab8e5aa56f6580e6db8a80accc8df217",
+  "references/writing.md": "d2ad8d2ba8745f0870df826fc157a4f930590a944ddcf0c57abe3c7c7ebdbea8",
   "references/follow-through.md": "01aae9479fb2fe75cf499fbd57fdbe484366f63332173e3bf09d3f663e1f5fa9",
-  "references/learning.md": "ae4132e2740b34acde5fdaad93e71e1b7a4410d6e30366b51a2542b01d4297a1",
-  "references/records.md": "721e4de5bb9dfd5e5682d9241109927d4a100c773f106a1ca807733f860fc9b1",
+  "references/learning.md": "84baa8c69f5feeeb344b1cc3e02759f3ec1d6c701cf350da577e3fbd316df6e4",
+  "references/records.md": "deb0f767d90c4120ed695d050c9470a7828b247023c1a96e02493117dd1dccff",
   "references/discovery.md": "328fdf1cdb31d85bd8b50471de334395b592a516f92f600da167943043222fd6",
-  "references/evidence.md": "11b0543d45287a08f8848a3523e85b9809df0dc2460f78abb69d7987e71183d5",
+  "references/evidence.md": "0cd94b2a448718e6f2c7b6d9110ea6e29606cba10caa334bed3c184b276e3a8e",
   "references/runtime.md": "57e1f3cbf168c291480943d8574dcdf0f33092ee44208a026aae3ceb37646f98",
   "scripts/outreach_state.py": "9d7e89be64639111de482b0fd348eec0ee0887dfb0ba9de8c97371f29b61a274",
   "scripts/schemas/batch.schema.json": "218944598997469fc9e429f84d7607c3586b6d02edbbb06544f8d3c9c2d90422"

@@ -19,3 +19,7 @@ Structural tests cannot establish improved discovery or acceptance rates. Cases 
 ## Multi-target regression (v1.1.4)
 
 [Multi-target cases](multi-target-cases.json) provide 20 fictional frozen tasks for persistent interests, recruitment checks, hosting organizations, model aliases, scoped commitments and restricted evidence. Keep criteria hidden from the executor; compare prior/current instructions on identical inputs. No model execution or outreach-result improvement is claimed.
+
+## Revision recovery (v1.1.5)
+
+[Twelve recovery cases](revision-recovery-cases.json) cover scoped topic changes, renamed papers, accepted lines, fragment/body merging, stale files, metadata-only edits and independent content/attachment/send states. These are fictional frozen protocols. Validate packet structure separately; assess semantic behavior through actual runs, not string matching. No independent model execution is claimed.
